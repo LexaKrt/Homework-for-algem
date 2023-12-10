@@ -92,7 +92,7 @@ public class Matrix {
             }
             for (int m = i + 1; m < rowsCount; m++) {
                 double k = - matrix[m][i] / matrix[i][i];
-                for (int j = i; j < columnCount; j++) {
+                for (int j = 0; j < columnCount; j++) {
                     matrix[m][j] += matrix[i][j] * k;
                     anotherMatrix.matrix[m][j] += anotherMatrix.matrix[i][j] * k;
                     matrix[m][j] = round(matrix[m][j]);
@@ -396,21 +396,28 @@ public class Matrix {
         Matrix matrix2 = new Matrix(setSizeOfNewMatrix());
         matrix2.chooseMethodToFillMatrix();
 
-
         Matrix resultOfMultiplication = matrix1.multiplicationOfMatrices(matrix2);*/
+
+
 
        /* Matrix resultOfSummarize = matrix1.sumOfMatrices(matrix2);
 
         System.out.println("This is result of summarize of two matrices: ");
         resultOfSummarize.printMatrix();*/
 
+
+
         /*System.out.println("This is result of multiplying of two matrices");
         resultOfMultiplication.printMatrix();*/
+
 
         /*Matrix matrix3 = new Matrix(setSizeOfNewMatrix());
         matrix3.chooseMethodToFillMatrix();
 
+
         System.out.println("Rank of your matrix is: " + matrix3.rank());*/
+
+
 
        /* Matrix matrix4 = new Matrix(matrix3.matrix);
         matrix4.gaussMethod();
@@ -419,6 +426,16 @@ public class Matrix {
 
         matrix4.printMatrix();*/
 
+        double[][] array = {
+                {0, 2, 0},
+                {0, 0, 1},
+                {1, 0, 0}
+        };
+
+        double[][] freeCoefs = {
+                {1}, {2}, {3}
+        };
+
         /*Matrix matrix5 = new Matrix(setSizeOfNewMatrix());
         matrix5.chooseMethodToFillMatrix();
 
@@ -426,10 +443,12 @@ public class Matrix {
         Matrix freeCoefficients = new Matrix(setSizeOfNewMatrix());
         freeCoefficients.chooseMethodToFillMatrix();
 
-        Matrix resultSolve = matrix5.kramerMethod(freeCoefficients);
+        Matrix resultSolve = matrix5.solve(freeCoefficients);
         resultSolve.printMatrix();*/
 
-        Matrix matrix6 = new Matrix(setSizeOfNewMatrix());
+
+
+        /*Matrix matrix6 = new Matrix(setSizeOfNewMatrix());
         matrix6.chooseMethodToFillMatrix();
 
         System.out.println(RED + "Enter matrix of free coefficients" + RESET);
@@ -437,7 +456,7 @@ public class Matrix {
         freeCoefs.chooseMethodToFillMatrix();
 
         Matrix resultKramer = matrix6.kramerMethod(freeCoefs);
-        resultKramer.printMatrix();
+        resultKramer.printMatrix();*/
     }
 
 
