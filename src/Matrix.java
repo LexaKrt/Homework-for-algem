@@ -455,6 +455,8 @@ public class Matrix {
         Matrix freeCoefs = new Matrix(setSizeOfNewMatrix());
         freeCoefs.chooseMethodToFillMatrix();
 
+        How old are you?
+
         Matrix resultKramer = matrix6.kramerMethod(freeCoefs);
         resultKramer.printMatrix();*/
     }
